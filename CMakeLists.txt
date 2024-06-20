@@ -9,6 +9,7 @@ configure_file(version.h.in version.h)
 
 find_package(Boost)
 find_package(SQLite3)
+find_package (sqlite3 REQUIRED /usr/local/lib/libsqlite3.so)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -19,6 +20,7 @@ add_executable(join_server main.cpp server.h server.cpp analyzer.h analyzer.cpp 
 target_link_libraries (join_server ${SQLITE3_LIBRARIES})
 
 include_directories(/usr/include)
+include_directories(/usr/local/lib)
 include_directories(${SQLite3_INCLUDE_DIRS})
 
 if (MSVC)
