@@ -16,8 +16,10 @@ set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-pthread -lsqlite3")
 set(BOOST_INCLUDE_LIBRARIES asio)
 
 add_executable(join_server main.cpp server.h server.cpp analyzer.h analyzer.cpp database.h database.cpp)
+target_link_libraries (join_server ${SQLITE3_LIBRARIES})
 
 include_directories(/usr/include)
+include_directories(${SQLite3_INCLUDE_DIRS})
 
 if (MSVC)
     target_compile_options(join_server PRIVATE
