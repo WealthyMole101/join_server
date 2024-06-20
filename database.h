@@ -4,6 +4,7 @@
 #include <list>
 #include <tuple>
 #include <map>
+#include <string>
 
 #include <sqlite3.h>
 
@@ -25,7 +26,6 @@ private:
     sqlite3* m_handle;
     static std::list<std::tuple<std::string, std::string>> list_a;
     static std::list<std::tuple<std::string, std::string>> list_b;
-//    std::map<std::string, std::string> m_symmetric_difference;
 };
 
 #endif // DATABASE_H

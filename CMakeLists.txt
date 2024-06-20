@@ -13,11 +13,9 @@ find_package(SQLite3)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-pthread -lsqlite3")
-#set(BOOST_INCLUDE_LIBRARIES thread filesystem system program_options asio date_time)
 set(BOOST_INCLUDE_LIBRARIES asio)
 
 add_executable(join_server main.cpp server.h server.cpp analyzer.h analyzer.cpp database.h database.cpp)
-#target_link_libraries(join_server stdc++fs)
 
 include_directories(/usr/include)
 
