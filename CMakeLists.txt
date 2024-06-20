@@ -9,7 +9,7 @@ configure_file(version.h.in version.h)
 
 find_package(Boost)
 find_package(SQLite3)
-find_package (sqlite3 REQUIRED /usr/local/lib/libsqlite3.so)
+find_package(SQLite3 REQUIRED /usr/local/lib/libsqlite3.so)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
